@@ -10,13 +10,15 @@ import Link from 'next/link'
 
 const useStyles = makeStyles({
   style: {
-    maxWidth: "20vw",
+    minheight:"200px",
+    height:"100%",
     },
   media: {
-    flexDirection: "row"
+    height: "100%",
+    maxheight:'20vw'
   },
   font:{
-    fontsize: '1vw',
+    fontsize: '3em',
     textDecoration: 'none',
     transition : 'fontWeight 2s',
     '&:hover':{
@@ -33,20 +35,20 @@ const Project = ({description, title, liveDemo, github, bgImg }) => {
   const cardStyle = useStyles();
 
   return (
-    <Card className={cardStyle.style}>
-      <CardActionArea className={cardStyle.media}>
+    <Card className={cardStyle.style} raised={true}>
+      <CardActionArea >
         <CardMedia
+          className={cardStyle.media}
           component="img"
-          alt="Contemplative Reptile"
-          minheight="10vw"
+          alt={title + " image"}
           image={bgImg}
           title={title}
         />
          <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" nowrap>
             {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="p" nowrap>
            {description}
           </Typography>
         </CardContent>

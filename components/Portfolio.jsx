@@ -8,8 +8,8 @@ const projects = [
     id: 1,
     title: "Betky",
     liveDemo: "https://www.google.com",
-    github: "",
-    bgImg: "https://i.picsum.photos/id/1/5616/3744.jpg",
+    github: "https://github.com/koloyyee/betky",
+    bgImg: "/image/Betky_logo-1-01.png",
     description: " Betky is a final project at coding bootcamp, it is a mock online gambling & streaming website."
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     title: "App Store Mock",
     liveDemo: "https://koloyyee.github.io/app-store-hook-infiniteScroll-fetch",
     github: "https://github.com/koloyyee/app-store-hook-infiniteScroll-fetch",
-    bgImg: "https://i.picsum.photos/id/2/5616/3744.jpg",
+    bgImg: "/image/app-store-og.png",
     description: "This project used React Hooks and IntersectionObserver API, mocking app store with infinite scrolling."
   },
   {
@@ -25,7 +25,7 @@ const projects = [
     title: "Roasita's Blog",
     liveDemo: "https://roasitas.herokuapp.com/",
     github: "https://github.com/koloyyee/roasitas",
-    bgImg: "https://i.picsum.photos/id/2/5616/3744.jpg",
+    bgImg: "/image/Roasita's-short-2-02.png",
     description: "This project used React Hooks and IntersectionObserver API, mocking app store with infinite scrolling."
   }
 ];
@@ -35,8 +35,6 @@ const useStyles = makeStyles({
     paddingTop:'3vw',
     margin: 0,
     textAlign : 'center',
-
-
   },
 
   grid: {
@@ -59,10 +57,10 @@ const Portfolio = () => {
         <h2 className = {style.intro} >Works</h2>
         <p> 'Doing is the <span className = {style.span}>BEST</span> way to learn.'</p>
       </div>
-      <Grid container className={style.grid}>
+      <Grid container className={style.grid} xs spacing={3}>
         {projects.map((project, i) => {
           return (
-            <Grid  key={i} item xs>
+            <Grid  key={i} item xs={4} zeroMinWidth>
               <Project
                 title={project.title}
                 liveDemo={project.liveDemo}
