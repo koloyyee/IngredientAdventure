@@ -47,7 +47,7 @@ const Contact =()=>{
     <footer id='contact' className={style.div}>
         <img className = {style.img} src ={'/image/IMG_3512.JPG'} alt='contact photo' />
         <Button className={style.button} variant='outlined'>
-            <a className = {style.anchor} href='/resume/IMG_3513.JPG' download> Resume</a>
+            <a className = {style.anchor} href='/resume/resume.pdf' download> Resume</a>
         </Button> 
     </footer>
     )

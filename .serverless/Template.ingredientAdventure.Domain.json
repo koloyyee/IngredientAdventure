@@ -1,0 +1,13 @@
+{
+  "region": "us-east-1",
+  "privateZone": false,
+  "domain": "ingredientadventure.com",
+  "subdomains": [
+    {
+      "domain": "www.ingredientadventure.com",
+      "distributionId": "EKYNU27JDUNHF",
+      "url": "https://d304pcuaadqkin.cloudfront.net",
+      "type": "awsCloudFront"
+    }
+  ]
+}

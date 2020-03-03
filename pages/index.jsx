@@ -25,7 +25,6 @@ const Top = styled.div`
 `;
 
 const Mid = styled.div`
-  ${'' /* height: 50vw; */}
   background: rgb(255, 255, 255);
 `;
 
@@ -65,7 +64,7 @@ const App = () => {
         <animated.div id="hero" style={fade}>
           <HeroText />
         </animated.div>
-        <Img src={"/image/IMG_3513.jpg"} alt="profile pic" />
+        <Img src={"/image/IMG_3513.JPG"} alt="profile pic" />
       </Top>
       <Mid>
           <Portfolio />

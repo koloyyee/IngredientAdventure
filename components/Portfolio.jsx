@@ -23,7 +23,7 @@ const projects = [
   {
     id: 3,
     title: "Roasita's Blog",
-    liveDemo: "roasitas.herokuapp.com/",
+    liveDemo: "https://roasitas.herokuapp.com/",
     github: "https://github.com/koloyyee/roasitas",
     bgImg: "https://i.picsum.photos/id/2/5616/3744.jpg",
     description: "This project used React Hooks and IntersectionObserver API, mocking app store with infinite scrolling."
