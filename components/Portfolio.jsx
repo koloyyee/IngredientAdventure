@@ -19,11 +19,11 @@ const projects = [
     github: "https://github.com/koloyyee/app-store-hook-infiniteScroll-fetch",
     bgImg: "https://i.picsum.photos/id/2/5616/3744.jpg",
     description: "This project used React Hooks and IntersectionObserver API, mocking app store with infinite scrolling."
-  }
+  },
   {
     id: 3,
     title: "Roasita's Blog",
-    liveDemo: "https://roasitas.com",
+    liveDemo: "roasitas.herokuapp.com/",
     github: "https://github.com/koloyyee/roasitas",
     bgImg: "https://i.picsum.photos/id/2/5616/3744.jpg",
     description: "This project used React Hooks and IntersectionObserver API, mocking app store with infinite scrolling."
@@ -74,7 +74,6 @@ const Portfolio = () => {
           );
         })}
       </Grid>
-
     </Container>
   );
 };
