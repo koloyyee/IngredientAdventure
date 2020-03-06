@@ -9,13 +9,13 @@ import { makeStyles } from "@material-ui/core";
 import Link from 'next/link'
 
 const useStyles = makeStyles({
-  style: {
-    minheight:"200px",
-    height:"100%",
+    card: {
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
     },
-  media: {
-    height: "100%",
-    maxheight:'20vw'
+  cardMedia: {
+    paddingTop: '56.25%'
   },
   font:{
     fontsize: '3em',
@@ -35,10 +35,9 @@ const Project = ({description, title, liveDemo, github, bgImg }) => {
   const cardStyle = useStyles();
 
   return (
-    <Card className={cardStyle.style} raised={true}>
+    <Card className={cardStyle.card} raised={true}>
       <CardActionArea >
         <CardMedia
-          className={cardStyle.media}
           component="img"
           alt={title + " image"}
           image={bgImg}

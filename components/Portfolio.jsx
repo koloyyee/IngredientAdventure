@@ -1,16 +1,16 @@
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Project from "./Project";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, createStyles } from "@material-ui/core";
 
 const projects = [
   {
     id: 1,
     title: "Betky",
-    liveDemo: "https://www.google.com",
+    liveDemo: "https://github.com/koloyyee/betky",
     github: "https://github.com/koloyyee/betky",
     bgImg: "/image/Betky_logo-1-01.png",
-    description: " Betky is a final project at coding bootcamp, it is a mock online gambling & streaming website."
+    description: "Betky(source code only) is a final project at coding bootcamp, it is a mock online gambling & streaming website."
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const projects = [
   }
 ];
 
-const useStyles = makeStyles({
+const useStyles = makeStyles( theme => ({
   intro:{
     paddingTop:'3vw',
     margin: 0,
@@ -44,23 +44,33 @@ const useStyles = makeStyles({
   },
   span:{
     fontStyle: 'italic'
-  }
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
 
-});
+}));
+
+const customStyle =()=>{
+  createStyles({
+    
+  })
+}
 
 const Portfolio = () => {
   const style = useStyles();
 
   return (
-    <Container id="portfolio" fixed>
-      <div className = {style.intro}>
+    <Container id="portfolio" className={style.cardGrid} maxWidth="md">
+      <div className = {style.intro} id="portfolio-header">
         <h2 className = {style.intro} >Works</h2>
         <p> 'Doing is the <span className = {style.span}>BEST</span> way to learn.'</p>
       </div>
-      <Grid container className={style.grid} xs spacing={3}>
+      <Grid container spacing={4}>
         {projects.map((project, i) => {
           return (
-            <Grid  key={i} item xs={4} zeroMinWidth>
+            <Grid  key={i} item xs={12} sm ={6} md={4}>
               <Project
                 title={project.title}
                 liveDemo={project.liveDemo}

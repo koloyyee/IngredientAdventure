@@ -1,4 +1,4 @@
 ingredientAdventure:
   component: "serverless-next.js"
-  # inputs:
-    # domain: ingredientadventure.com
+  inputs:
+    domain: "ingredientadventure.com"

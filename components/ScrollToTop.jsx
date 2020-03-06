@@ -1,39 +1,41 @@
 import { makeStyles, useScrollTrigger, Zoom } from "@material-ui/core";
 import PropTypes from "prop-types";
 
-const useStyle = makeStyles({
-  zoom: {
-    padding:'2vw',
-    margin: '0',
-    display: "flex",
-    justifyContent: "flex-end",
-    backgroundColor: "rgba(62,62,62, 1)"
-  }
-});
+const useStyles = makeStyles(theme => ({
+  root: {
+    position: "fixed",
+    bottom: theme.spacing(2),
+    right: theme.spacing(2)
+  },
+}));
 
-const ScrollToTop = props => {
-  const style = useStyle();
-  const { children } = props;
+function ScrollTop(props) {
+  const { children, window } = props;
+  const classes = useStyles();
+
   const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
     disableHysteresis: true,
-    threshold: 100
+    threshold: 500
   });
-  const handleClick = e => {
-    const a = (e.target.ownerDocument || document).querySelector("#hero");
-    if (a) {
-      a.scrollIntoView({ behavior: "smooth", block: "center" });
+
+  const handleClick = (event, newValue) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      "#back-to-top-anchor"
+    );
+
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
   return (
-    <Zoom className={style.zoom} in={trigger}>
-      <div onClick={handleClick}> {children}</div>
+    <Zoom in={trigger}>
+      <div onClick={handleClick} role="presentation" className={classes.root}>
+        {children}
+      </div>
     </Zoom>
   );
-};
+}
 
-export default ScrollToTop;
-
-ScrollToTop.propsType = {
-  children: PropTypes.element.isRequired
-};
+export default ScrollTop
