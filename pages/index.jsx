@@ -10,10 +10,12 @@ import Contact from "../components/Contact";
 import { Container } from "@material-ui/core";
 import Footer from '../components/Footer' 
 import About from "../components/About"
+import Testing from '../components/test'
+import Head from "next/head";
 
 const Top = styled.div`
   display: flex;
-  min-height: 50vw;
+  min-height:55vw;
   justify-content: space-between;
   background: rgb(62, 62, 62);
   background: linear-gradient(
@@ -62,8 +64,19 @@ const App = (props) => {
   const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
 
   return (
+
     <Container maxWidth="xl" style={{margin: '0 auto', padding: 0}}>
+    <Head >
+    <script dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','UA-106131048-1');`}} />
+    </Head>
+    <noscript dangerouslySetInnerHTML={{__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=UA-106131048-1" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`}} />
+
       <Nav />
+      <Testing />
       <Top>
         <animated.div id="hero" style={fade}>
           <HeroText />
@@ -81,6 +94,7 @@ const App = (props) => {
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
+      <Footer />
       </LowerMid>
     </Container>
   );

@@ -32,7 +32,7 @@ const useStyle = makeStyles({
   anchor: {
     textDecoration: "none",
     color: "#edd340",
-    fontSize: "1vh",
+    fontSize: "3vw",
     fontWeight: 600,
     "&:hover": {
       color: "grey",

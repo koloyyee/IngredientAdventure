@@ -7,7 +7,7 @@ const projects = [
   {
     id: 1,
     title: "Betky",
-    liveDemo: "https://github.com/koloyyee/betky",
+    liveDemo: "/image/betky.gif",
     github: "https://github.com/koloyyee/betky",
     bgImg: "/image/Betky_logo-1-01.png",
     description: "Betky(source code only) is a final project at coding bootcamp, it is a mock online gambling & streaming website."
