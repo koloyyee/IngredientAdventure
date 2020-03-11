@@ -8,16 +8,13 @@ import Nav from "../components/Nav";
 import ScrollTop from "../components/ScrollToTop";
 import Contact from "../components/Contact";
 import { Container } from "@material-ui/core";
-import Footer from '../components/Footer' 
-import About from "../components/About"
-import Head from "next/head";
-import React, {useEffect} from 'react';
-import ReactGA from 'react-ga';
-
+import Footer from "../components/Footer";
+import About from "../components/About";
+import React from "react";
 
 const Top = styled.div`
   display: flex;
-  min-height:55vw;
+  min-height: 55vw;
   justify-content: space-between;
   background: rgb(62, 62, 62);
   background: linear-gradient(
@@ -26,7 +23,7 @@ const Top = styled.div`
     rgba(127, 127, 128, 0.6) 40%,
     rgba(255, 255, 255, 1) 100%
   );
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%)
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 `;
 
 const Mid = styled.div`
@@ -50,7 +47,7 @@ const fadeIn = keyframes`
 `;
 
 const Img = styled.img`
-  position:relative;
+  position: relative;
   max-height: 20vw;
   max-width: 20vw;
   min-height: 150px;
@@ -61,24 +58,11 @@ const Img = styled.img`
   margin: 10vw;
 `;
 
-const App = (props) => {
-
+const App = props => {
   const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
 
-  useEffect(()=>{
-    ReactGA.initialize('UA-106131048-1');
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  },[])
-
-
   return (
-
-    <Container maxWidth="xl" style={{margin: '0 auto', padding: 0}}>
-    <Head >
-
-    </Head>
-    <noscript dangerouslySetInnerHTML={{__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=UA-106131048-1" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`}} />
-
+    <Container maxWidth="xl" style={{ margin: "0 auto", padding: 0 }}>
       <Nav />
       <Top>
         <animated.div id="hero" style={fade}>
@@ -87,17 +71,17 @@ const App = (props) => {
         <Img src={"/image/IMG_3513.JPG"} alt="profile pic" />
       </Top>
       <Mid>
-          <Portfolio />
+        <Portfolio />
       </Mid>
       <LowerMid>
         <About />
         <Contact />
-       <ScrollTop {...props}>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
-      <Footer />
+        <ScrollTop {...props}>
+          <Fab color="secondary" size="small" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </ScrollTop>
+        <Footer />
       </LowerMid>
     </Container>
   );
