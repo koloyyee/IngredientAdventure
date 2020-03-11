@@ -1,8 +1,8 @@
 backend:
-  name: test-repo
+  name: git-gateway
   branch: master
-media_folder: public/img
-public_folder: img
+media_folder: public/image
+public_folder: image
 collections:
   - name: "pages"
     label: "Pages"
