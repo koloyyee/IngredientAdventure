@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "npm run build && next export"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +20,12 @@
     "next-images": "^1.3.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-ga": "^2.7.0",
     "react-spring": "^8.0.27",
     "serverless": "^1.65.0",
     "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "frontmatter-markdown-loader": "^3.2.1"
   }
 }

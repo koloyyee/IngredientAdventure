@@ -1,4 +1,5 @@
 import React from "react";
+import Head from 'next/head';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles } from "@material-ui/core/styles";
@@ -49,6 +50,9 @@ export default function BackToTop(props) {
 
   return (
     <>
+    <Head>
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        </Head>
       <CssBaseline />
       <AppBar>
         <Paper>

@@ -14,9 +14,9 @@ const tableData = (title, stack) => {
 };
 
 const techStack = [
-  tableData("Frontend", ["ReactJS", "Javascript", "Typescript"]),
-  tableData("Backend", ["NodeJs", "ExpressJs", "Django"]),
-  tableData("DevOp, Version Control", ["Git", "CI/CD", "Jest"])
+  tableData("Frontend", ["ReactJS", "Javascript", "Typescript", "GraphQL", "Material-UI", "Ant Design", "Bootstrap", "HTML5", "CSS3"]),
+  tableData("Backend", ["Python", "NodeJs", "ExpressJs", "Django", "REST API", "Django Rest Framework"]),
+  tableData("DevOp, Version Control", ["Git", "CI/CD", "AWS", "Jest"])
 ];
 
 const useStyles = makeStyles({
@@ -57,12 +57,10 @@ const About = () => {
         <Table className={styles.table} size="small" aria-label="a dense table">
           <TableHead className={styles.row}>
             <TableRow>
-              <TableCell>Technology</TableCell>
+              <TableCell align="left" colSpan={3}>Technology</TableCell>
 
-              <TableCell alight="right">Languages</TableCell>
-              <TableCell alight="right">&</TableCell>
-              <TableCell alight="right">Frameworks</TableCell>
-            </TableRow>
+              <TableCell align="center" colSpan={9}></TableCell>
+              </TableRow>
           </TableHead>
           <TableBody>
             {techStack.map(tech => {
