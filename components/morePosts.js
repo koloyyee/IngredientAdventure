@@ -39,7 +39,6 @@ const Title = styled.h2`
 `;
 
 const MorePosts = ({ posts }) => {
-  console.log(posts);
   return (
     <More>
       <Title>more</Title>

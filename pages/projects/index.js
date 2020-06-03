@@ -34,7 +34,6 @@ const Projects = ({ projects }) => {
 
 export const getStaticProps = async () => {
   const projects = await getAllProjects();
-  console.log(projects[0].node.repo);
   return { props: { projects } };
 };
 

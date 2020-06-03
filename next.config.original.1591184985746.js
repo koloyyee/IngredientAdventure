@@ -1,31 +1,35 @@
 // const withCss = require("@zeit/next-css");
-const withFonts = require("next-fonts");
+// const withFonts = require("next-fonts");
 
-module.exports = withFonts(
+module.exports = {
+  target: "serverless"
+}
 
-  // withCss({
-  //   target: "serverless",
+// module.exports = withFonts(
+
+//   withCss({
+//     target: "serverless",
   
-    webpack: cfg => {
-      cfg.module.rules.push({
-        test: /\.md$/,
-        loader: "frontmatter-markdown-loader",
-        options: { mode: ["react-component"] }
-      });
-      return cfg;
-    },
-    webpack: (config, { isServer }) => {
-      // Fixes npm packages that depend on `fs` module
-      if (!isServer) {
-        config.node = {
-          fs: "empty"
-        };
-      }
+//     webpack: cfg => {
+//       cfg.module.rules.push({
+//         test: /\.md$/,
+//         loader: "frontmatter-markdown-loader",
+//         options: { mode: ["react-component"] }
+//       });
+//       return cfg;
+//     },
+//     webpack: (config, { isServer }) => {
+//       // Fixes npm packages that depend on `fs` module
+//       if (!isServer) {
+//         config.node = {
+//           fs: "empty"
+//         };
+//       }
   
-      return config;
-    }
-  })
-);
+//       return config;
+//     }
+//   })
+// );
 
 
  

@@ -1,22 +1,32 @@
 import { getPostAndMore, getAllPostsWithSlug } from "../../lib/api";
-import ErrorPage from "next/error";
-import { useRouter } from "next/router";
 import { RichText } from "prismic-reactjs";
-import Link from "next/link";
 import SideNav from "../../components/navbar";
 import CoverImage from "../../components/coverImage";
+import Link from "next/link";
+import ErrorPage from 'next/error'
+import { useRouter } from 'next/router'
+
 
 const Post = ({ post, morePost, preview }) => {
+
+  const router = useRouter()
+  if (!router.isFallback && !post?._meta?.uid) {
+    return <ErrorPage statusCode={404} />
+  }
+
   return (
     <>
       <SideNav />
+      {router.isFallback ? (
+          <h1>Loading…</h1>
+        ) : (
       <div>
-        <h1>{post.title[0].text}</h1>
-        <RichText render={post.content} />
+        <RichText render={post?.title} />
+        <RichText render={post?.content} />
         <CoverImage
-          title={RichText.asText(post.title)}
-          slug={post._meta.uid}
-          url={post.coverimage.url}
+          title={RichText.asText(post?.title)}
+          slug={post?._meta.uid}
+          url={post?.coverimage.url}
         />
         <div>
           <Link as={`/`} href={"/"}>
@@ -24,6 +34,7 @@ const Post = ({ post, morePost, preview }) => {
           </Link>
         </div>
       </div>
+      )}
     </>
   );
 };
@@ -42,7 +53,6 @@ export const getStaticProps = async ({
   previewData,
 }) => {
   const data = await getPostAndMore(params.slug, previewData);
-  console.log(data.post);
   return {
     props: {
       preview,
