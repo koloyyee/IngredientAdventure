@@ -1,10 +1,10 @@
-const withCss = require("@zeit/next-css");
+// const withCss = require("@zeit/next-css");
 const withFonts = require("next-fonts");
 
 module.exports = withFonts(
 
-  withCss({
-    target: "serverless",
+  // withCss({
+  //   target: "serverless",
   
     webpack: cfg => {
       cfg.module.rules.push({
