@@ -1,5 +1,3 @@
-import { makeStyles, useScrollTrigger, Zoom } from "@material-ui/core";
-import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   root: {

@@ -1,13 +1,10 @@
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
 import Project from "./Project";
-import { makeStyles, createStyles } from "@material-ui/core";
 
 const projects = [
   {
     id: 1,
     title: "Betky",
-    liveDemo: "/image/betky.gif",
+    liveDemo: "http://betky.ingredientadventure.com",
     github: "https://github.com/koloyyee/betky",
     bgImg: "/image/Betky_logo-1-01.png",
     description: "Betky(source code only) is a final project at coding bootcamp, it is a mock online gambling & streaming website."

@@ -1,6 +1,4 @@
-import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core";
-import Container from "@material-ui/core/Container";
+
 
 const useStyle = makeStyles({
   div: {
@@ -21,7 +19,8 @@ const useStyle = makeStyles({
   button: {
     overflow: "hidden",
     alignSelf: "center",
-    minHeight: "5vw",
+    maxHeight:"5vw",
+    minHeight: "3vw",
     backgroundColor:"grey",
     margin:"1vw",
     padding: "0px 5vw 0vw 5vw",
@@ -32,7 +31,7 @@ const useStyle = makeStyles({
   anchor: {
     textDecoration: "none",
     color: "#edd340",
-    fontSize: "3vw",
+    fontSize: "0.8rem",
     fontWeight: 600,
     "&:hover": {
       color: "grey",

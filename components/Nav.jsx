@@ -1,12 +1,6 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import { makeStyles } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Paper from "@material-ui/core/Paper";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import Link from "next/link";
 import ReactGA from "react-ga";
 
 const navItems = [
@@ -56,7 +50,6 @@ export default function BackToTop(props) {
   return (
     <>
       <Head>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=UA-106131048-1" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`
@@ -85,6 +78,13 @@ export default function BackToTop(props) {
                 </a>
               );
             })}
+            {/* <Link href="/blog">
+                <Tab
+                  className = {styles.tabs}
+                  label='Blog'
+                />
+
+            </Link> */}
           </Tabs>
         </Paper>
       </AppBar>

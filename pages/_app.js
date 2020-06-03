@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import "./index.css";
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../src/theme';
+import theme from '../style/theme';
+import {ThemeProvider} from 'styled-components';
 import {useEffect} from 'react';
+import GlobalStyle from '../style/globalStyle'
 
 
 export default function MyApp({ Component, pageProps }) {
@@ -23,10 +22,14 @@ export default function MyApp({ Component, pageProps }) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=UA-106131048-1" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`
+          }}
+        />
       </Head>
       <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
+        <GlobalStyle />
           <Component {...pageProps} />
         </ThemeProvider>
 
