@@ -1,13 +1,13 @@
 {
   "name": "6zhl0q9-mghrfrq",
-  "hash": "KWNyZpKybg0ak008R/+qClqTRkkV6FPIdwIsYVs831Y=",
+  "hash": "FXssdb+G4SZ/PfETT/sNqk20fe4KbBCdbO1qK40Nbc0=",
   "description": "Default Lambda@Edge for Next CloudFront distribution",
   "memory": 512,
   "timeout": 10,
   "code": "/Users/loyyeeko/Code/GitHub/JavaScript/IngredientAdvenuture/.serverless_nextjs/default-lambda",
   "shims": [],
   "handler": "index.handler",
-  "runtime": "nodejs10.x",
+  "runtime": "nodejs12.x",
   "env": {},
   "role": {
     "arn": "arn:aws:iam::580899688510:role/6zhl0q9-p7gbbh7"

@@ -1,39 +1,45 @@
 import { getPostAndMore, getAllPostsWithSlug } from "../../lib/api";
 import { RichText } from "prismic-reactjs";
+import styled from "styled-components";
 import SideNav from "../../components/navbar";
 import CoverImage from "../../components/coverImage";
 import Link from "next/link";
-import ErrorPage from 'next/error'
-import { useRouter } from 'next/router'
+import ErrorPage from "next/error";
+import { useRouter } from "next/router";
 
+const IndividualPost = styled.div`
+  width: 50%;
+  line-height: 2;
+  text-indent: 1em;
+  text-align: justify;
+`;
 
 const Post = ({ post, morePost, preview }) => {
-
-  const router = useRouter()
+  const router = useRouter();
   if (!router.isFallback && !post?._meta?.uid) {
-    return <ErrorPage statusCode={404} />
+    return <ErrorPage statusCode={404} />;
   }
 
   return (
     <>
       <SideNav />
       {router.isFallback ? (
-          <h1>Loading…</h1>
-        ) : (
-      <div>
-        <RichText render={post?.title} />
-        <RichText render={post?.content} />
-        <CoverImage
-          title={RichText.asText(post?.title)}
-          slug={post?._meta.uid}
-          url={post?.coverimage.url}
-        />
-        <div>
-          <Link as={`/`} href={"/"}>
-            <a>home</a>
-          </Link>
-        </div>
-      </div>
+        <h1>Loading…</h1>
+      ) : (
+        <IndividualPost>
+          <RichText render={post?.title} />
+          <RichText render={post?.content} />
+          <CoverImage
+            title={RichText.asText(post?.title)}
+            slug={post?._meta.uid}
+            url={post?.coverimage.url}
+          />
+          <div>
+            <Link as={`/`} href={"/"}>
+              <a>home</a>
+            </Link>
+          </div>
+        </IndividualPost>
       )}
     </>
   );

@@ -20,6 +20,7 @@ const Project = ({title, image, description, demo, github}) => {
             <RichText render = {title} />
             <p>{description}</p>
             <a href={demo} target="_blank">Demo</a>
+            <br/>
             <a href={github} target="_blank">Repo</a>
             <Image src = {image} />
         </ProjectCard>

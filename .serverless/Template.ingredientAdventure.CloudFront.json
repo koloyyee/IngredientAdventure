@@ -13,22 +13,37 @@
         },
         "static/*": {
           "ttl": 86400
+        },
+        "api/*": {
+          "ttl": 0,
+          "allowedHttpMethods": [
+            "HEAD",
+            "DELETE",
+            "POST",
+            "GET",
+            "OPTIONS",
+            "PUT",
+            "PATCH"
+          ],
+          "lambda@edge": {
+            "origin-request": "arn:aws:lambda:us-east-1:580899688510:function:6zhl0q9-zoq60eoo:6"
+          }
         }
       }
     }
   ],
   "defaults": {
     "ttl": 0,
-    "allowedHttpMethods": [
-      "HEAD",
-      "GET"
-    ],
     "forward": {
       "cookies": "all",
       "queryString": true
     },
+    "allowedHttpMethods": [
+      "HEAD",
+      "GET"
+    ],
     "lambda@edge": {
-      "origin-request": "arn:aws:lambda:us-east-1:580899688510:function:6zhl0q9-mghrfrq:88"
+      "origin-request": "arn:aws:lambda:us-east-1:580899688510:function:6zhl0q9-mghrfrq:96"
     }
   }
 }
