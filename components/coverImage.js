@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const Image = styled.img`
-  max-width: 20vw;
+  max-width: 45vw;
   transition-duration: 0.5s;
   border-radius: 1vw;
 

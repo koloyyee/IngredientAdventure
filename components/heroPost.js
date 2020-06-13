@@ -21,14 +21,19 @@ const LinkTo = styled.a`
   }
 `;
 
-const Excerpt = styled.p`
-    color:${({theme}) => theme.light.navText};
-    max-width: 50vw;
+const Post = styled.p`
+  color: ${({ theme }) => theme.light.navText};
+  max-width: 50vw;
+  margin: 5vw;
+  width: 50%;
+  line-height: 2;
+  text-indent: 1em;
+  text-align: justify;
 `;
 
-const HeroPost = ({ title, author, excerpt, slug, date, coverImage }) => {
+const HeroPost = ({ title, author, content, slug, date, coverImage }) => {
   return (
-    <section>
+    <Post>
       <div>
         <CoverImage
           title={RichText.asText(title)}
@@ -36,15 +41,15 @@ const HeroPost = ({ title, author, excerpt, slug, date, coverImage }) => {
           url={coverImage.url}
         />
       </div>
-        <h4>
-          <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <LinkTo>
-              <RichText render={title} />
-            <Excerpt>{excerpt}</Excerpt>
-            </LinkTo>
-          </Link>
-        </h4>
-    </section>
+      <h4>
+        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+          <LinkTo>
+            <RichText render={title} />
+          </LinkTo>
+        </Link>
+      </h4>
+      <RichText render={content} />
+    </Post>
   );
 };
 

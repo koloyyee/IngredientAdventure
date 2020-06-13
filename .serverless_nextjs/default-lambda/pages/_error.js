@@ -88,12 +88,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "+rVf");
+/******/ 	return __webpack_require__(__webpack_require__.s = "+iUJ");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "+rVf":
+/***/ "+iUJ":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -197,10 +197,10 @@ __webpack_require__.r(__webpack_exports__);
         getStaticPaths,
         reactLoadableManifest,
         canonicalBase: "",
-        buildId: "F3V0PkOV3oIR88Pf8HjKk",
+        buildId: "ho_6ZqUGQCMKLOWlzSxCA",
         assetPrefix: "",
         runtimeConfig: runtimeConfig.publicRuntimeConfig || {},
-        previewProps: {previewModeId:"a17d638cb18365e3fcce00f7c6ea41a8",previewModeSigningKey:"b0c590c3d3184d0a3a6743c9771bbfe54e7669514f39f31cdf32db5e5f9a1b74",previewModeEncryptionKey:"f9243889c99ae46b6abff5af734f94c9352de84b2bed4cda7953176a8bfea9a0"},
+        previewProps: {previewModeId:"fa60cfa28401c84a7aa1be92abaa74a0",previewModeSigningKey:"94001162f6990b811a87c66e33982fe596bf799240a38726542263d198565cba",previewModeEncryptionKey:"0e15645b20da6af7463521d6adcbd02c76edd3f8de18364221c2f023ab74b774"},
         env: process.env,
         basePath: "",
         ..._renderOpts
@@ -214,7 +214,7 @@ __webpack_require__.r(__webpack_exports__);
         if (parsedUrl.pathname.match(/_next\/data/)) {
           _nextData = true
           parsedUrl.pathname = parsedUrl.pathname
-            .replace(new RegExp('/_next/data/F3V0PkOV3oIR88Pf8HjKk/'), '/')
+            .replace(new RegExp('/_next/data/ho_6ZqUGQCMKLOWlzSxCA/'), '/')
             .replace(/\.json$/, '')
         }
 
@@ -2885,7 +2885,7 @@ exports.default = index;
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"devFiles\":[],\"lowPriorityFiles\":[\"static/F3V0PkOV3oIR88Pf8HjKk/_buildManifest.js\",\"static/F3V0PkOV3oIR88Pf8HjKk/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/237932f9b19bfe96c657143609d6591908270145.c6b63b0b3cde5912f012.js\",\"static/chunks/d2c3700dd300f10be8ec6d5f9060a317cb508a20.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/_app\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/237932f9b19bfe96c657143609d6591908270145.c6b63b0b3cde5912f012.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/_error\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/_polyfills\":[\"static/runtime/polyfills-1c161e633660818aa2c3.js\"],\"/about\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/237932f9b19bfe96c657143609d6591908270145.c6b63b0b3cde5912f012.js\",\"static/chunks/d2c3700dd300f10be8ec6d5f9060a317cb508a20.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/index\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/237932f9b19bfe96c657143609d6591908270145.c6b63b0b3cde5912f012.js\",\"static/chunks/d2c3700dd300f10be8ec6d5f9060a317cb508a20.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/posts/[slug]\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/237932f9b19bfe96c657143609d6591908270145.c6b63b0b3cde5912f012.js\",\"static/chunks/d2c3700dd300f10be8ec6d5f9060a317cb508a20.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/projects\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/237932f9b19bfe96c657143609d6591908270145.c6b63b0b3cde5912f012.js\",\"static/chunks/d2c3700dd300f10be8ec6d5f9060a317cb508a20.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"]}}");
+module.exports = JSON.parse("{\"devFiles\":[],\"lowPriorityFiles\":[\"static/ho_6ZqUGQCMKLOWlzSxCA/_buildManifest.js\",\"static/ho_6ZqUGQCMKLOWlzSxCA/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/f230a704f926ee5290e8a76f281d9932be7ab439.c6b63b0b3cde5912f012.js\",\"static/chunks/7c75132564098651cac7bb744342df646b0907ff.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/_app\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/f230a704f926ee5290e8a76f281d9932be7ab439.c6b63b0b3cde5912f012.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/_error\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/_polyfills\":[\"static/runtime/polyfills-1c161e633660818aa2c3.js\"],\"/about\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/f230a704f926ee5290e8a76f281d9932be7ab439.c6b63b0b3cde5912f012.js\",\"static/chunks/7c75132564098651cac7bb744342df646b0907ff.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/index\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/f230a704f926ee5290e8a76f281d9932be7ab439.c6b63b0b3cde5912f012.js\",\"static/chunks/7c75132564098651cac7bb744342df646b0907ff.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/posts/[slug]\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/f230a704f926ee5290e8a76f281d9932be7ab439.c6b63b0b3cde5912f012.js\",\"static/chunks/7c75132564098651cac7bb744342df646b0907ff.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"],\"/projects\":[\"static/runtime/webpack-c212667a5f965e81e004.js\",\"static/chunks/framework.e84fa698c7ee940652bd.js\",\"static/chunks/commons.04448986172abcdf9360.js\",\"static/chunks/f230a704f926ee5290e8a76f281d9932be7ab439.c6b63b0b3cde5912f012.js\",\"static/chunks/7c75132564098651cac7bb744342df646b0907ff.7ed070f1767c563f5000.js\",\"static/runtime/main-b38d9d6490cc6849f1b0.js\"]}}");
 
 /***/ }),
 
