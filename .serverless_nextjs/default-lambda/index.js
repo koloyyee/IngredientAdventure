@@ -40,6 +40,9 @@ const router = (manifest) => {
                 return file;
             }
         }
+        if (html.nonDynamic["/404"] !== undefined) {
+            return "pages/404.html";
+        }
         return "pages/_error.js";
     };
 };

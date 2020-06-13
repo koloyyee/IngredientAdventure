@@ -24,7 +24,6 @@ const LinkTo = styled.a`
 const Post = styled.p`
   color: ${({ theme }) => theme.light.navText};
   max-width: 50vw;
-  margin: 5vw;
   width: 50%;
   line-height: 2;
   text-indent: 1em;
@@ -33,7 +32,7 @@ const Post = styled.p`
 
 const HeroPost = ({ title, author, content, slug, date, coverImage }) => {
   return (
-    <Post>
+    <section>
       <div>
         <CoverImage
           title={RichText.asText(title)}
@@ -48,8 +47,10 @@ const HeroPost = ({ title, author, content, slug, date, coverImage }) => {
           </LinkTo>
         </Link>
       </h4>
-      <RichText render={content} />
-    </Post>
+      <Post>
+        <RichText render={content} />
+      </Post>
+    </section>
   );
 };
 

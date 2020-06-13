@@ -26,7 +26,7 @@
             "PATCH"
           ],
           "lambda@edge": {
-            "origin-request": "arn:aws:lambda:us-east-1:580899688510:function:6zhl0q9-zoq60eoo:10"
+            "origin-request": "arn:aws:lambda:us-east-1:580899688510:function:6zhl0q9-zoq60eoo:12"
           }
         },
         "_next/data/*": {
@@ -36,7 +36,7 @@
             "GET"
           ],
           "lambda@edge": {
-            "origin-request": "arn:aws:lambda:us-east-1:580899688510:function:6zhl0q9-mghrfrq:100"
+            "origin-request": "arn:aws:lambda:us-east-1:580899688510:function:6zhl0q9-mghrfrq:102"
           }
         }
       }
@@ -53,7 +53,7 @@
       "GET"
     ],
     "lambda@edge": {
-      "origin-request": "arn:aws:lambda:us-east-1:580899688510:function:6zhl0q9-mghrfrq:100"
+      "origin-request": "arn:aws:lambda:us-east-1:580899688510:function:6zhl0q9-mghrfrq:102"
     }
   }
 }

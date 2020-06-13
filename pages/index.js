@@ -85,6 +85,7 @@ const App = ({ preview, allPosts }) => {
           coverImage={heroPost.coverimage}
           author={heroPost.author}
           content={heroPost.content}
+          excerpt = {heroPost.excerpt}
         />
       )}
       {morePosts.length > 0 && <MorePosts posts ={morePosts} />}
