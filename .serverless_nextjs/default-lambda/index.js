@@ -12,9 +12,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.handler = void 0;
 const prerender_manifest_json_1 = __importDefault(require("./prerender-manifest.json"));
 const manifest_json_1 = __importDefault(require("./manifest.json"));
-const next_aws_cloudfront_1 = __importDefault(require("next-aws-cloudfront"));
+const next_aws_cloudfront_1 = __importDefault(require("@sls-next/next-aws-cloudfront"));
 const addS3HostHeader = (req, s3DomainName) => {
     req.headers["host"] = [{ key: "host", value: s3DomainName }];
 };
@@ -63,7 +64,7 @@ exports.handler = (event) => __awaiter(void 0, void 0, void 0, function* () {
         s3Origin.path = isHTMLPage ? "/static-pages" : "/public";
         if (isHTMLPage) {
             addS3HostHeader(request, s3Origin.domainName);
-            request.uri = uri + ".html";
+            request.uri = `${uri}.html`;
         }
         return request;
     }
